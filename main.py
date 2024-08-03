@@ -13,9 +13,9 @@ def home():
     return render_template("index.html", blogs=blogs)
 
 
-@app.route('/post/<num>')
+@app.route('/post/<int:num>')
 def post(num):
-    return render_template("post.html", blogs=blogs)
+    return render_template("post.html", blogs=blogs, num=num)
 
 
 if __name__ == "__main__":
